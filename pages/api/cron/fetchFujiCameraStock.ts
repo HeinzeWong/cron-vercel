@@ -27,7 +27,7 @@ async function update(key: string) {
   // 1. 请求当前这个商品的页面
   try {
     const json: any = await axios.get(
-      'https://fujifilmshop.com.hk/zh-hant/products/detail/289'
+      'http://fujifilmshop.com.hk/zh-hant/products/detail/289'
     )
 
     const html = parse(json.data)
