@@ -25,18 +25,30 @@ export default function Post({ interval }: { interval: string }) {
     )
 
   const { id, stock, fetchedAt } = data || {}
-  return (
+  return ( 
     <div className="flex justify-between items-center border border-gray-100 shadow-md rounded-lg p-5">
       <div className="grid gap-2">
-        <a
-          href={'https://fujifilmshop.com.hk/zh-hant/products/detail/289'}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <h3 className="text-gray-600 hover:text-black font-semibold transition-all">
-            Fuji Camera
-          </h3>
-        </a>
+        <div className="flex items-center">
+          <a
+            href={'https://fujifilmshop.com.hk/zh-hant/products/detail/289'}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <h3 className="text-gray-600 hover:text-black font-semibold transition-all">
+              Fuji Camera
+            </h3>
+
+          </a>
+          <button
+            className="bg-blue text-white font-bold py-1 px-2 rounded ml-2 text-xs"
+            onClick={() => {
+              fetch(`/api/cron/fetchFujiCameraStock`)
+            }}
+          >
+            Check now
+          </button>
+        </div>
+
         <div className="flex space-x-1 text-gray-500 text-sm">
           <a >stock:</a>
           <span>{stock}</span>

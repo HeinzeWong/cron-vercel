@@ -7,7 +7,7 @@ const cronJobs = [
   {
     id: CronKeyEnums['XS20-HK'],
     name: 'Fetch Fuji Camera Stock',
-    cron: 'fetch every 10 minutes',
+    cron: 'fetch every day',
   },
 ]
 

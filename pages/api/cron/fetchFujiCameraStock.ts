@@ -35,7 +35,7 @@ async function update(key: string) {
     // 找到所有className为add-cart，如果它className为quantity的子元素，没有disable className，就是有库存
     const stock = [...html.querySelectorAll('.add-cart')].filter((el: any) => {
       // debugger
-      return true
+      // return true
 
       
       // 正确的
@@ -48,7 +48,7 @@ async function update(key: string) {
       for (const to of fujiStockMailDetails.tos) {
         // sendEmail(to, fujiStockMailDetails.subject, fujiStockMailDetails.html)
       }
-      sendLarkTextMessage('有货了！')
+      sendLarkTextMessage('HK有货了！')
     }
 
     const response = await kv.set(key, {
