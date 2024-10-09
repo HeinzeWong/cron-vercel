@@ -2,10 +2,9 @@
   "buildCommand": "pnpm turbo build",
   "ignoreCommand": "pnpm dlx turbo-ignore",
   "crons": [
-   
     {
       "path": "/api/cron/fetchFujiCameraStock",
-      "schedule": "*/10 * * * *"
-    } 
+      "schedule": "0 0 * * *"
+    }
   ]
 }
